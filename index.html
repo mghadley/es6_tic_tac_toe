@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='main.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+  <body>
+    <div class='row center'>
+			<h1>TIC TAC TOE</h1>
+		</div>
+		<div class='row center'>
+			<h2 id='turn-heading'><span id='turn'>x</span>'s Turn</h2>
+		</div>
+		<div class='row'>
+			<table id='table'>
+				<tr>
+					<td onClick="fillIn(0,0)" class='right-border bottom-border'></td>
+					<td onClick="(fillIn(0,1))" class='left-border bottom-border right-border'></td>
+					<td onClick="(fillIn(0,2))" class='left-border bottom-border'></td>
+				</tr>
+				<tr>
+					<td onClick="(fillIn(1,0))" class='top-border right-border bottom-border'></td>
+					<td onClick="(fillIn(1,1))" class='all-borders'></td>
+					<td onClick="(fillIn(1,2))" class='top-border left-border bottom-border'></td>
+				</tr>
+				<tr>
+					<td onClick="(fillIn(2,0))" class='top-border right-border'></td>
+					<td onClick="(fillIn(2,1))" class='left-border top-border right-border'></td>
+					<td onClick="(fillIn(2,2))" class='top-border left-border'></td>
+				</tr>
+			</table>
+		</div>
+		<div class='row center'>
+			<div class='col m2 offset-m5'>
+				<div id='reset' class='btn reset-btn' onClick='reset()'>Reset</div>
+			</div>
+		</div>
+    <script src="main.js" type="text/babel" />
+  </body>
+</html>
